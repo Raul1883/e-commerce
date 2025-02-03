@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок страницы</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/global_styles.css'%}" type="text/css">
+
+    <meta property="og:title" content="Заголовок страницы в OG">
+    <meta property="og:description" content="Описание страницы в OG">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:url" content="https://example.com/">
+</head>
+<body>
+
+<header>
+    <h2>Shop.co</h2>
+    <ul class="menu">
+        <li>обувь</li>
+        <li>одежда</li>
+        <li>доставка</li>
+        <li>о нас</li>
+    </ul>
+    <a>корзина</a>
+</header>
+
+<main>
+    <h1>{{product.brand}}</h1>
+<img src="{{ product.image.url }}">
+
+</main>
+<footer>
+    <div>
+        <h2>Logo</h2>
+        <p>info</p>
+    </div>
+    <div>
+        <h3>FAQ</h3>
+        <ul>
+            <li>Доставка</li>
+            <li>Оплата</li>
+            <li>Возврат</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Help</h3>
+        <ul>
+            <li>Поддержка</li>
+            <li>Правила</li>
+            <li>Наши отличники</li>
+        </ul>
+    </div>
+</footer>
+<script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
